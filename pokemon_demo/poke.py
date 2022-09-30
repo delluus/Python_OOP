@@ -20,6 +20,11 @@ class Pokemon:
         resBat = self.typewheel(self.primary_type, other.primary_type)
         print(f'Result of battle from {self.name}: {resBat}')
 
+        if resBat == 'loss':
+            self.hp -= 5
+        if resBat == 'win':
+            other.hp -= 10
+
     @staticmethod
     def typewheel(type1, type2):
         result = {0:"loss", 1:"win",-1:"tie"}
