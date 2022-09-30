@@ -18,7 +18,7 @@ class Pokemon:
     def battle(self, other):
         print(f"Battle: {self.name}, {other.name}")
         resBat = self.typewheel(self.primary_type, other.primary_type)
-        print(f'Result of battle from {self.name}: {resBat}')
+        print(f'Result of battle: {self.name} get\'s a {resBat}')
 
         if resBat == 'loss':
             self.hp -= 5
